@@ -1,8 +1,8 @@
 <template>
     <div class="chart-container">
-        
-        <canvas v-show="labels.length > 0" 
-                v-bind:id="id" 
+
+        <canvas v-show="labels.length > 0"
+                v-bind:id="id"
         ></canvas>
 
         <div v-show="labels.length === 0" class="text-xs-center">No data</div>
@@ -11,10 +11,10 @@
 </template>
 
 <script type="text/javascript">
-    
+
 import Chart from 'chart.js'
 
-const colors = [ "#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB" ]
+const colors = [ '#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB' ]
 
 export default {
 
@@ -37,13 +37,13 @@ export default {
 
     watch: {
         labels: 'valuesUpdated',
-        values: 'valuesUpdated' 
+        values: 'valuesUpdated'
     },
 
     methods: {
-        valuesUpdated (n,o) {
+        valuesUpdated (n, o) {
             this.chart.data.labels = this.labels
-            this.chart.data.datasets[0].data = this.values;
+            this.chart.data.datasets[0].data = this.values
             this.chart.update()
         }
 
@@ -56,10 +56,10 @@ export default {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                animation: { animateScale:true },
+                animation: { animateScale: true },
                 legend: { position: 'right' }
             }
-        });
+        })
     }
 }
 </script>

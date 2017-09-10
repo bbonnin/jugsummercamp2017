@@ -1,6 +1,6 @@
-# draw-me-a-chart
+# my-data-viz
 
-> Demo
+> From csv to a nice data chart
 
 ## Build Setup
 

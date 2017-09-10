@@ -6,20 +6,20 @@ import Dataview from '@/components/Dataview'
 Vue.use(Router)
 
 export default new Router({
-  
-  routes: [
 
-    {
-      path: '/',
-      name: 'Welcome',
-      component: Welcome
-    }
+    routes: [
 
-    , {
-      path: '/dataview',
-      name: 'Dataview',
-      component: Dataview
-    }
+        {
+            path: '/',
+            name: 'Welcome',
+            component: Welcome
+        },
 
-  ]
+        {
+            path: '/dataview',
+            name: 'Dataview',
+            component: Dataview
+        }
+
+    ]
 })

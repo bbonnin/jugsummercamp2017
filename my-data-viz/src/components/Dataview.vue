@@ -12,10 +12,10 @@
                 <v-card-title>Your data</v-card-title>
                 <v-card-text>
                   <v-card-row height="150px">
-                    <!-- ************************************************ --> 
-                      
+                    <!-- ************************************************ -->
+
                     <textarea class="user-data" v-model="csvdata"></textarea>
-                      
+
                     <!-- ************************************************ -->
                   </v-card-row>
                 </v-card-text>
@@ -25,7 +25,7 @@
                   <v-btn v-on:click.native="clear" class="grey lighten-4" default>Clear</v-btn>
                   <v-btn v-on:click.native="setDefaultData" class="grey lighten-4" default>Show example</v-btn>
 
-                  <!-- ******************************************************* -->                  
+                  <!-- ******************************************************* -->
                 </v-card-row>
               </v-card>
             </v-col>
@@ -43,7 +43,7 @@
                         <tr><th v-for="label in labels">{{ label }}</th></tr>
                         <tr><td v-for="value in values">{{ value }}</td></tr>
                       </table>
-                      
+
                     </div>
 
                     <div v-else class="no-data text-xs-center">No data</div>
@@ -58,7 +58,7 @@
                     <v-btn-toggle v-bind:options="chartOptions" v-model="chartType" class="right"></v-btn-toggle>
                   </v-col>
 
-                  <!-- ******************************************************* -->                  
+                  <!-- ******************************************************* -->
                 </v-card-row>
               </v-card>
             </v-col>
@@ -99,14 +99,14 @@ export default {
             csvdata: '',
             chartType: 'pie',
             chartOptions: [
-              { icon: 'pie_chart', value: 'pie', class: 'white--text' },
-              { icon: 'insert_chart', value: 'bar' }
-           ]
+                { icon: 'pie_chart', value: 'pie', class: 'white--text' },
+                { icon: 'insert_chart', value: 'bar' }
+            ]
         }
     },
 
     components: {
-        'pie-chart': PieChart, 'bar-chart': BarChart 
+        'pie-chart': PieChart, 'bar-chart': BarChart
     },
 
     computed: {
@@ -125,7 +125,7 @@ export default {
             if (lines.length > 1) {
                 return lines[i].split(',')
             }
-            return []   
+            return []
         },
 
         clear: function () {
@@ -149,13 +149,13 @@ export default {
 }
 
 .data-table {
-  display: table;
-  width: 100%;
+    display: table;
+    width: 100%;
 }
 
 .user-data {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 th {
