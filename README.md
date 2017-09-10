@@ -1,2 +1,2 @@
-# jugsummercamp2017
-Source code of the demo
+# web2day2017
+Demo vuejs
