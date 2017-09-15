@@ -1,7 +1,7 @@
 {
   "name": "first-app",
   "version": "1.0.0",
-  "description": "My first vue.js project",
+  "description": "My first vue.js project with vuex",
   "author": "Bruno Bonnin <bbonnin@gmail.com>",
   "private": true,
   "scripts": {
